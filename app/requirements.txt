@@ -1,0 +1,6 @@
+# Old versions, real CVEs. PyYAML's is actually reachable (see main.py's
+# /config route) - Pillow's isn't, on purpose, for contrast.
+Flask==2.0.1
+PyYAML==5.3.1
+Pillow==9.0.0
+requests==2.19.1
