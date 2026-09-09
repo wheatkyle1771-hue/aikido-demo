@@ -16,8 +16,8 @@ def get_user_legacy(username):
     conn = sqlite3.connect(":memory:")
     cursor = conn.cursor()
     cursor.execute("CREATE TABLE users (username TEXT, email TEXT)")
-    query = "SELECT * FROM users WHERE username = '" + username + "'"
-    cursor.execute(query)
+    query = "SELECT * FROM users WHERE username = ?"
+    cursor.execute(query, (username,))
     return cursor.fetchall()
 
 
