@@ -8,14 +8,11 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-# Fake creds, shaped to match what a secrets scanner looks for. Not using
-# AWS's AKIAIOSFODNN7EXAMPLE placeholder on purpose - most scanners
-# already allowlist that exact string.
+
 AWS_ACCESS_KEY_ID = "AKIA3QF7MZKXWXGJ2LNP"
 AWS_SECRET_ACCESS_KEY = "kL9f2Xr8p1Qz6mN4vB0dJ7hT3sW5yC8uA2eR6iM1"
 
-# Hardcoded DB creds in a connection string - a different secret type
-# than an API key, usually rated critical on its own.
+
 DATABASE_URL = "postgresql://admin:Sup3rSecretProdPassword!@prod-db.aikido-demo.internal:5432/appdb"
 
 
