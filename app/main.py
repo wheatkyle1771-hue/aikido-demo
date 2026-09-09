@@ -41,7 +41,6 @@ def get_user():
 
 @app.route("/ping")
 def ping():
-    # OS command injection via shell=True.
     host = request.args.get("host", "127.0.0.1")
     output = subprocess.check_output(f"ping -c 1 {host}", shell=True)
     return output
